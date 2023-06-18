@@ -11,11 +11,10 @@ int main(void)
 
 	for (b = 97; b <= 122; b++)
 	{
-	if (b == 113 && b == 101)
-		continue;
-	putchar(b);
+		if (b == 113 || b == 101)
+			continue;
+		putchar(b);
 	}
 	putchar ('\n');
 	return (0);
 }
-
