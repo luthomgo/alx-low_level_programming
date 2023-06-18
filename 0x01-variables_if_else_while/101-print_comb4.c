@@ -19,7 +19,9 @@ int main(void)
 				if (c > b && b > a)
 				{
 					putchar(a);
+
 					putchar(b);
+
 					putchar(c);
 
 					if (a != 55 || b != 56)
