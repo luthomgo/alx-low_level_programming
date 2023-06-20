@@ -10,10 +10,10 @@ void print_alphabet_x10(void)
 	int a;
 
 	a = 0;
-	alpha = 97;
 
 	while (a < 10)
 	{
+		alpha = 97;
 		while (alpha <= 122)
 		{
 			putchar(alpha);
