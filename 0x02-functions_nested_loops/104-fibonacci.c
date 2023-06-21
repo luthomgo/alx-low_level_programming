@@ -11,6 +11,9 @@ int main(void)
 	unsigned long int c;
 	unsigned long int d;
 
+	b = 1;
+	c = 2;
+
 	printf("%lu, %lu", b, c);
 
 	for (a = 0; a < 96; a++)
