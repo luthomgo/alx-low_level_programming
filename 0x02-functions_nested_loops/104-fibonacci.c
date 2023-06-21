@@ -14,7 +14,7 @@ int main(void)
 	b = 1;
 	c = 2;
 	printf("%lu, %lu", b, c);
-	for (a = 0; a < 96; a++)
+	for (a = 0; a < 98; a++)
 	{
 		d = b + c;
 		printf(", %lu", d);
