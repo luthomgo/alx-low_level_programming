@@ -11,15 +11,15 @@ int main(void)
 	unsigned long int c;
 	unsigned long int d;
 
-	b = 1;
-	c = 2;
+	b = 0;
+	c = 1;
 
-	printf("%lu, %lu", b, c);
-
-	for (a = 0; a < 96; a++)
+	for (a = 0; a < 98; a++)
 	{
+		printf("%lu", b);
+		if (a != 97)
+			printf(",");
 		d = b + c;
-		printf(", %lu", d);
 		b = c;
 		c = d;
 	}
