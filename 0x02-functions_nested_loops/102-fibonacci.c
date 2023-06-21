@@ -11,19 +11,21 @@ int main(void)
 	unsigned long int c;
 	unsigned long int result;
 
-	a = 50;
 	b = 1;
 	c = 2;
 
-	while (b <= a)
+	for (a = 0; a < 50; a++)
 	{
-		printf("%lu", b);
-		if (b != a)
-			printf(',');
 		result = b + c;
+		printf("%lu", result);
+
 		b = c;
 		c = result;
+
+		if (a == 49)
+			printf('\n');
+		else
+			printf(',');
 	}
-	printf('\n');
 	return (0);
 }
