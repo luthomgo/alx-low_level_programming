@@ -1,4 +1,4 @@
-#include<stdio.h>
+ #include<stdio.h>
 /**
  * main - program that finds and prints the first 98 num start with 1 and 2
  *
@@ -11,15 +11,13 @@ int main(void)
 	unsigned long int c;
 	unsigned long int d;
 
-	b = 0;
-	c = 1;
-
-	for (a = 0; a < 98; a++)
+	b = 1;
+	c = 2;
+	printf("%lu, %lu", b, c);
+	for (a = 0; a < 96; a++)
 	{
-		printf("%lu", b);
-		if (a != 97)
-			printf(",");
 		d = b + c;
+		printf("%lu", d);
 		b = c;
 		c = d;
 	}
