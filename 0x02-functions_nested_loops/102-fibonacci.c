@@ -12,17 +12,18 @@ int main(void)
 	unsigned long int result;
 
 	a = 50;
-	b = 0;
-	c = 1;
+	b = 1;
+	c = 2;
 
 	while (b <= a)
 	{
-		printf("%ld", b);
+		printf("%lu", b);
 		if (b != a)
 			printf(',');
 		result = b + c;
 		b = c;
 		c = result;
 	}
+	printf('\n');
 	return (0);
 }
