@@ -7,9 +7,9 @@
 int main(void)
 {
 	int a;
-	unsigned long b;
-	unsigned long c;
-	unsigned long result;
+	unsigned long int b;
+	unsigned long int c;
+	unsigned long int result;
 
 	a = 50;
 	b = 0;
@@ -17,7 +17,7 @@ int main(void)
 
 	while (b <= a)
 	{
-		printf("%d", b);
+		printf("%ld", b);
 		if (b != a)
 			printf(',');
 		result = b + c;
