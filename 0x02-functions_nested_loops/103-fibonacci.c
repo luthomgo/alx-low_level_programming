@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-	int a;
 	unsigned long int b;
 	unsigned long int c;
 	unsigned long int d;
@@ -20,7 +19,7 @@ int main(void)
 	{
 		if (b % 2 == 0)
 			sum = sum + b;
-		result = b + c;
+		d = b + c;
 		b = c;
 		c = d;
 	}
