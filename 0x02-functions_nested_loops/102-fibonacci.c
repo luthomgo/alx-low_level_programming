@@ -16,16 +16,13 @@ int main(void)
 
 	for (a = 0; a < 50; a++)
 	{
+		printf("%lu", b);
+		if (a != 49)
+			printf(",");
 		result = b + c;
-		printf("%lu", result);
-
 		b = c;
 		c = result;
-
-		if (a == 49)
-			printf('\n');
-		else
-			printf(',');
 	}
+	printf("\n");
 	return (0);
 }
