@@ -16,8 +16,9 @@ int main(void)
 
 	for (a = 0; a < 50; a++)
 	{
-		printf("%lu, ", b);
+		printf("%lu ", b);
 		if (a != 49)
+			printf(",");
 		result = b + c;
 		b = c;
 		c = result;
