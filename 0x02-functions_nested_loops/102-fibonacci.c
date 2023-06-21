@@ -18,8 +18,7 @@ int main(void)
 	{
 		printf("%lu", b);
 		if (a != 49)
-			printf(",");
-		printf(" ");
+			printf(", ");
 		result = b + c;
 		b = c;
 		c = result;
