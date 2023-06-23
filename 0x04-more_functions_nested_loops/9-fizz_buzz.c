@@ -25,7 +25,7 @@ int main(void)
 		}
 		else if ((a % 3 != 0) && (a % 5 != 0))
 		{
-			printf(" %d", a);
+			printf("%d ", a);
 		}
 	}
 	printf("\n");
