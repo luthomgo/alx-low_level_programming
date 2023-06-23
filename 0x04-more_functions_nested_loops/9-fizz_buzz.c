@@ -23,13 +23,9 @@ int main(void)
 		{
 			printf("Buzz");
 		}
-		else if (a == 1)
+		else if ((a % 3 != 0) && (a % 5 != 0))
 		{
-			printf("%d", a);
-		}
-		else
-		{
-			printf("%d", a);
+			printf("%d ", a);
 		}
 	}
 	printf("\n");
