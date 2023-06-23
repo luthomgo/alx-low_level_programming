@@ -2,11 +2,11 @@
 #include<stdlib.h>
 #include<time.h>
 /**
- * main - asssigning a random number to the variable n
- *
+ * positive_or_negative - asssigning a random number to the variable n
+ * @int: integer
  * Return: Always 0
  */
-int main(void)
+int positive_or_negative(void)
 {
 	int n;
 
