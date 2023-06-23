@@ -18,7 +18,7 @@ int main(void)
 			a = a / b;
 			b--;
 		}
-		printf("%ld\n", b);
 	}
+	printf("%ld\n", b);
 	return (0);
 }
