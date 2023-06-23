@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * print_number- function that prints an integer
- * @n: int used
+ * @n: int to be checked
  *
  * Return: Always 0
  */
