@@ -8,30 +8,16 @@
  */
 int main(void)
 {
-	int i;
-
-	char password[11];
+	int a;
+	char b;
 
 	srand(time(NULL));
-	for (i = 0; i < 10; i++)
+	while (a <= 2645)
 	{
-		int r = rand() % 62;
-
-		if (r < 26)
-		{
-			password[i] = 'a' + r;
-		}
-		else if (r < 52)
-		{
-			password[i] = 'A' + r - 26;
-		}
-		else
-		{
-			password[i] = '0' + r - 52;
-		}
+		b = rand() % 128;
+		a += b;
+		putchar(b);
 	}
-	password[10] = '\0';
-	printf("%s\n", password);
+	putchar(2772 - a);
 	return (0);
 }
-
