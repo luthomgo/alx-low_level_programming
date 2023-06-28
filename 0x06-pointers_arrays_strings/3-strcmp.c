@@ -1,24 +1,30 @@
 #include<stdio.h>
 #include "main.h"
 /**
- * *_strncpy  - function that copies a string
- * @dest:  a  string
- * @src: a string
- * @n:  integer
+ * *_strcmp - function that compares two strings
+ * @s1: first string
+ * @s2: second string
  *
- * Return: dest
+ * Return: an integer less than, equal to, or greater than zero
  */
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
 	int a;
 
-	for (a = 0; a < n && src[a] != '\0'; a++)
+	a = 0;
+
+	while (s1[a] == s2[a])
 	{
-		dest[a] = src[a];
+		if (s1[a] == '\0' || s2[a] == '\0')
+			break;
 	}
-	for (; a < n; a++)
+	a++;
 	{
-		dest[a] = '\0';
+		if (s1[a] == '\0' && s2[a] == '0')
+		{
+			return (0);
+		}
+		else
+			return (-1);
 	}
-	return (dest);
 }
