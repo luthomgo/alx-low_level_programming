@@ -5,7 +5,7 @@
  * @s1: first string
  * @s2: second string
  *
- * Return: an integer less than, equal to, or greater than zero
+ * Return: Always 0
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -13,20 +13,13 @@ int _strcmp(char *s1, char *s2)
 
 	a = 0;
 
-	while (s1[a] == s2[a])
+	while (s1[a] != '\0' && s2[a] != '\0')
 	{
-		if (s1[a] == '\0' || s2[a] == '\0')
+		if (s1[a] != s2[a])
 		{
-			break;
+			return (s1[a] - s2[a]);
 		}
 		a++;
 	}
-	if (s1[a] == '\0' && s2[a] == '\0')
-	{
-		return (0);
-	}
-	else
-	{
-		return (-1);
-	}
+	return (0);
 }
