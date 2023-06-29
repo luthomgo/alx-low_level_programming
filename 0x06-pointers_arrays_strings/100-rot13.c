@@ -9,24 +9,20 @@
 char *rot13(char *a)
 {
 	int b;
+	int c;
+
+	char rot13[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char ROT13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (b = 0; a[b] != '\0'; b++)
 	{
-		if (a[b] >= 97 && a[b] <= 109)
+		for (c = 0; c < 52; c++)
 		{
-			a[b] = a[b] + 13;
-		}
-		else if (a[b] >= 110 && a[b] <= 122)
-		{
-			a[b] = a[b] - 13;
-		}
-		else if (a[b] >= 65 && a[b] <= 77)
-		{
-			a[b] = a[b] + 13;
-		}
-		else if (a[b] >= 78 && a[b] <= 90)
-		{
-			a[b] = a[b] - 13;
+			if (a[b] == rot13[c])
+			{
+				a[b] = ROT13[c];
+				break;
+			}
 		}
 	}
 	return (a);
