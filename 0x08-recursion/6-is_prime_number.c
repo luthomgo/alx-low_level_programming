@@ -31,7 +31,7 @@ int is_prime_number(int n)
  */
 int real_prime(int a, int b)
 {
-	if (a == 1)
+	if (a >= b && b > 1)
 	{
 		return (1);
 	}
@@ -40,5 +40,5 @@ int real_prime(int a, int b)
 		return (0);
 	}
 	else
-		return (real_prime(b, a - 1));
+		return (real_prime(b, a + 1));
 }
