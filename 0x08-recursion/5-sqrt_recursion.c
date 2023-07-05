@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include "main.h"
+
+int  real_sqrt(int a, int b);
+
 /**
  * _sqrt_recursion - function that returns the natural root of a number
  * @n: integer
@@ -8,22 +11,42 @@
  */
 int _sqrt_recursion(int n)
 {
-	int a;
-	int b;
 
-	a = 1;
-	b = 1;
-	while (b <= n)
+	if (n < 0)
 	{
-		a++;
-		b = a * a;
+		return (-1);
 	}
-	if (b == n)
+	else if (n == 0)
+	{
+		return (0);
+	}
+	else if (n == 1)
+	{
+		return (1);
+	}
+	else
+		return (real_sqrt(n, 0));
+}
+
+/**
+ * real_sqrt - finding the natural square root
+ * @a: integer
+ * @b: integer
+ *
+ * Return: root
+ */
+int real_sqrt(int a, int b)
+{
+	if (a * a == b)
 	{
 		return (a);
 	}
-	else
+	else if (a * a > b)
 	{
 		return (-1);
+	}
+	else
+	{
+		return (real_sqrt(b, a + 1));
 	}
 }
