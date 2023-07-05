@@ -10,7 +10,11 @@ int real_prime(int a, int b);
  */
 int is_prime_number(int n)
 {
-	if (n <= 1)
+	if (n == 2)
+	{
+		return (1);
+	}
+	else if (n % 2 == 0 || n <= 1)
 	{
 		return (0);
 	}
