@@ -11,9 +11,8 @@ int result(char *l);
 int is_palindrome(char *s)
 {
 	int a;
-
+	
 	a = 0;
-
 	if (*s > '\0')
 		a = (a + result(s + 1) + 1);
 	return (a);
@@ -36,4 +35,3 @@ int result(char *l)
 		return (result(l + 1) + 1);
 	}
 
-}
