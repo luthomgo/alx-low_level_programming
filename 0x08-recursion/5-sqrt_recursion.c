@@ -15,8 +15,8 @@ int _sqrt_recursion(int n)
 	b = 1;
 	while (b <= n)
 	{
-		b = a * a;
 		a++;
+		b = a * a;
 	}
 	if (b == n)
 	{
