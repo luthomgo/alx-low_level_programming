@@ -41,12 +41,10 @@ int real_sqrt(int a, int b)
 	{
 		return (a);
 	}
-	else if (a * a > b)
-	{
-		return (-1);
-	}
-	else
+	else if (a * a < b)
 	{
 		return (real_sqrt(b, a + 1));
 	}
+	else
+		return (-1);
 }
