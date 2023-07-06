@@ -28,7 +28,7 @@ int real_sqrt(int a, int b)
 	}
 	else if (a * a < b)
 	{
-		return (real_sqrt(b, a + 1));
+		return (real_sqrt(a + 1, b));
 	}
 	else
 		return (-1);
