@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 int  real_sqrt(int a, int b);
@@ -25,7 +24,7 @@ int real_sqrt(int a, int b)
 {
 	if (a * a == b)
 	{
-		return (0);
+		return (a);
 	}
 	else if (a * a < b)
 	{
