@@ -25,7 +25,7 @@ int _sqrt_recursion(int n)
 		return (1);
 	}
 	else
-		return (real_sqrt(n, 0));
+		return (real_sqrt(n, 1));
 }
 
 /**
