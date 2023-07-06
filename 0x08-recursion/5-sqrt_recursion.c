@@ -25,7 +25,7 @@ int real_sqrt(int a, int b)
 {
 	if (a * a == b)
 	{
-		return (a);
+		return (0);
 	}
 	else if (a * a < b)
 	{
