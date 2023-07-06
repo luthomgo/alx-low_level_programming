@@ -10,7 +10,7 @@ int  real_sqrt(int a, int b);
  */
 int _sqrt_recursion(int n)
 {
-	return (real_sqrt(n, 0));
+	return (real_sqrt(n, 1));
 }
 
 /**
