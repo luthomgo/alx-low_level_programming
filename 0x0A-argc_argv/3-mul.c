@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - a program that that multiple two numbers
+ * _atoi - a program that that multiple two numbers
  * @s: string
  *
  * Return: string
@@ -64,4 +64,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-
