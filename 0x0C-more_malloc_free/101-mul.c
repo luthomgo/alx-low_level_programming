@@ -65,7 +65,7 @@ void error(void)
 int main(int argc, char *argv[])
 {
 	char *num1, *num2;
-	int a, b, c, d, e = 0, f, g, h;
+	int a, b, c, d, e, f, g;
 	int *j;
 
 
@@ -96,15 +96,13 @@ int main(int argc, char *argv[])
 			j[a + b + 1] = j[a + b + 1] + e;
 	}
 	for (d = 0; d < c - 1; d++)
-	{
 		if (j[d])
-			h = 1;
-		if (h)
-			_putchar(j[d] + '0');
-	}
-	if (!h)
-		_putchar('0');
-	_putchar('\n');
+			break;
+	for (; d < c; d++)
+		printf("%d", j[d]);
+	printf("\n");
+
 	free(j);
+
 	return (0);
 }
