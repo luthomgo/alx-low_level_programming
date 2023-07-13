@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
+
 #define ERR_MSG "Error"
 
 int non_digit(char *a);
@@ -61,7 +62,7 @@ void error(void)
  *
  * Return: Always 0
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	char *num1, *num2;
 	int a, b, c, d, e = 0, f, g, h;
@@ -71,6 +72,7 @@ int main(int argc, char *argv)
 	num1 = argv[1], num2 = argv[2];
 	if (argc != 3 || !non_digit(num1) || !non_digit(num2))
 		error();
+
 	a = _strlen(num1);
 	b = _strlen(num2);
 	c = a + b + 1;
@@ -82,7 +84,8 @@ int main(int argc, char *argv)
 	for (a = a - 1; a >= 0; a--)
 	{
 		f = num1[a] - '0';
-		for (b = _strlen(num2) - 1; num2 >= 0; num2--)
+		e = 0;
+		for (b = _strlen(num2) - 1; b >= 0; b--)
 		{
 			g = num2[b] - '0';
 			e = e + j[a + b + 1] + (f * g);
@@ -90,7 +93,7 @@ int main(int argc, char *argv)
 			e = e / 10;
 		}
 		if (e > 0)
-			j[a + b + 1] + e = e;
+			j[a + b + 1] = j[a + b + 1] + e;
 	}
 	for (d = 0; d < c - 1; d++)
 	{
