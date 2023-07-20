@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int a, b;
-	char *c = (char *)main;
+	int (*c)(int, char **) = main;
 	unsigned char opcode;
 
 	if (argc != 2)
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	for (b = 0; b < a; b++)
 	{
 		opcode = *(unsigned char *)c;
-	printf("%.2x ", opcode);
+	printf("%.2x", opcode);
 	if (b == a - 1)
 		continue;
 	printf(" ");
